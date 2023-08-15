@@ -24,6 +24,13 @@ yes_no_confirm <- function() {
   use_macos()
 }
 
+#' @title Show input dialog
+#' @description \code{text_input} evoke OS native input dialog
+#'
+#' @param msg message
+#' @export
+#' @examples
+#' # text_input("Please input number of the amount.")
 text_input <- function(msg) {
   use_macos()
 }
