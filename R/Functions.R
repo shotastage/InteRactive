@@ -5,6 +5,10 @@ use_macos <- function() {
   }
 }
 
+use_platform <- function(platforms) {
+
+}
+
 os_alert <- function(msg) {
   system(paste0("osascript -e 'display dialog \"", msg, "\" buttons {\"OK\"}'"))
 }
