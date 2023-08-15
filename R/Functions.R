@@ -9,6 +9,13 @@ use_platform <- function(platforms) {
 
 }
 
+#' @title Show alert dialog
+#' @description \code{os_alert} evoke OS native alert dialog
+#'
+#' @param msg message
+#' @export
+#' @examples
+#' # os_alert("Hello!")
 os_alert <- function(msg) {
   system(paste0("osascript -e 'display dialog \"", msg, "\" buttons {\"OK\"}'"))
 }
