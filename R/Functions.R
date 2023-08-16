@@ -9,6 +9,17 @@ use_platform <- function(platforms) {
 
 }
 
+#' @title Show OS native dialog
+#' @description \code{os_dialog} evoke OS native dialog
+#'
+#' @param msg message
+#' @export
+#' @examples
+#' # os_dialog(list(message = "Hello",continue = "OK",abort = "Cancel"))
+os_dialog <- function(msg_obj) {
+  system(paste0("osascript -e 'display dialog \"", msg_obj$message, "\" buttons {\"", msg_obj$continue,"\"}'"))
+}
+
 #' @title Show alert dialog
 #' @description \code{os_alert} evoke OS native alert dialog
 #'
@@ -24,13 +35,6 @@ yes_no_confirm <- function() {
   use_macos()
 }
 
-#' @title Show input dialog
-#' @description \code{text_input} evoke OS native input dialog
-#'
-#' @param msg message
-#' @export
-#' @examples
-#' # text_input("Please input number of the amount.")
 text_input <- function(msg) {
   use_macos()
 }
