@@ -33,6 +33,20 @@ os_alert <- function(msg) {
 
 yes_no_confirm <- function() {
   use_macos()
+
+  script <- '
+osascript <<END
+set dialogResult to display dialog "Do you want to continue?" buttons {"Yes", "No"} default button "No"
+
+if button returned of dialogResult is "Yes" then
+  display dialog "Yes"
+else
+  display dialog "No"
+end if
+END
+'
+
+system(script, intern = TRUE)
 }
 
 text_input <- function(msg) {
